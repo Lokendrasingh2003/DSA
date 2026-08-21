@@ -3,7 +3,7 @@
  * @return {number}
  */
 
- // hello
+ // hello  knk
 var secondHighest = function(s) {
    let largest = -1 
    let secondLargest = -1 
