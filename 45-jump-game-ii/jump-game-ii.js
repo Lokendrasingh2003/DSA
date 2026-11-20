@@ -3,16 +3,17 @@
  * @return {number}
  */
 var jump = function(nums) {
-    let minJump = 0 
-    let l=0 
+    let l=0
     let r=0
+    minJump=0
     while(r<nums.length-1){
-        let further=0
+        let maxIndex = 0 
         for(let j=l;j<=r;j++){
-            further = Math.max(further,j+nums[j])
+            maxIndex = Math.max(maxIndex , j+nums[j])
+
         }
         l=r+1
-        r=further
+        r=maxIndex
         minJump++
     }
     return minJump
