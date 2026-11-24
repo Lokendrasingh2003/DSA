@@ -7,25 +7,24 @@
 
 
 var findMissingAndRepeatedValues = function(grid) {
-    let n=grid.length
-    let max=n*n 
-    let count=new Array(max+1).fill(0)
-    let repeated = -1
-    let missing = -1
-    for(let row of grid){
+      let n = grid.length 
+      n = n*n
+      let newArray = new Array(n+1).fill(0)
+      let repeated = -1
+      let missing = -1
+      for(let row of grid){
         for(let num of row){
-            count[num]++
-            if(count[num]==2){
-                repeated=num
+            newArray[num]++
+            if(newArray[num]==2){
+                repeated = num
             }
             
         }
-    } 
-    for(let i=1;i<=max;i++){
-        if(count[i]==0){
-            missing=i
+      }
+      for(let i=1;i<=n;i++){
+        if(newArray[i]==0){
+            missing = i
         }
-    }
-    return [repeated,missing]
-
+      }
+      return [repeated,missing]
 };
